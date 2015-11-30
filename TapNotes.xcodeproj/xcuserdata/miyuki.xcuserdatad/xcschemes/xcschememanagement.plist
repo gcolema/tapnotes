@@ -4,10 +4,20 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Notification - TapNotesWatch.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>TapNotes.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+		<key>TapNotesWatch.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -23,6 +33,11 @@
 			<true/>
 		</dict>
 		<key>D73F082B1BF95F5A00455903</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D73F083F1BF95F7D00455903</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="9019"/>
+    </dependencies>
+    <scenes>
+        <!--TapNotes-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller identifier="TapNotes" title="TapNotes" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="TapNotesWatch" customModuleProvider="target">
+                    <items>
+                        <table alignment="left" id="C7Q-mH-f2i">
+                            <items>
+                                <tableRow identifier="row" id="W3h-U3-0oV" customClass="rowController" customModule="TapNotesWatch_Extension">
+                                    <group key="rootItem" width="1" height="27.5" alignment="left" id="CL0-Oe-cNd">
+                                        <items>
+                                            <label width="123" height="26" alignment="left" text="Label" id="BoE-2k-4OP"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="rowLabel" destination="BoE-2k-4OP" id="lWC-B4-iVL"/>
+                                        <segue destination="wyO-Ex-DLz" kind="modal" id="lGG-in-MDo"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                        <button width="123" height="30" alignment="center" title="New Note" id="LPM-sH-D0g">
+                            <color key="backgroundColor" red="0.32780836464123192" green="0.81628787878787878" blue="0.20861032249565545" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="btnPressed" destination="AgC-eL-Hgc" id="TJu-GN-ddc"/>
+                            </connections>
+                        </button>
+                        <separator alignment="left" id="Nx0-aH-feq"/>
+                        <button width="123" height="30" alignment="center" title="Delete Top" id="BsK-Jv-fou">
+                            <color key="backgroundColor" red="0.99244397095959591" green="0.58177194727943327" blue="0.63143355081203623" alpha="0.93000000000000005" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="btnPressedDelete" destination="AgC-eL-Hgc" id="3no-EK-JuY"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="TableOutlet" destination="C7Q-mH-f2i" id="mKa-Ln-sR6"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="215" y="345"/>
+        </scene>
+        <!--Note Detail-->
+        <scene sceneID="rxQ-qE-hhu">
+            <objects>
+                <controller identifier="SecondController" title="Note Detail" id="wyO-Ex-DLz" customClass="SecondInterfaceController" customModule="TapNotesWatch_Extension">
+                    <items>
+                        <label width="1" height="98" alignment="left" text="Label" textAlignment="center" baselineAdjustment="alignCenters" numberOfLines="6" id="N5N-zI-t8S"/>
+                    </items>
+                    <connections>
+                        <outlet property="labelOutlet2" destination="N5N-zI-t8S" id="RFz-0u-eHE"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="403" y="345"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="174" y="650"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="TapNotesWatch" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="374" y="650"/>
+        </scene>
+    </scenes>
+</document>
